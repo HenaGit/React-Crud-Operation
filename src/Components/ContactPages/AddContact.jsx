@@ -25,6 +25,9 @@ class AddContact extends React.Component {
       this.setState({ errorMessage: response.msg, successMessage: undefined });
     }
   };
+  handleCancel = () => {
+    this.props.cancelUpdateContact();
+  };
   render() {
     return (
       <div className="border col-12 text-white p-2">
@@ -96,7 +99,7 @@ class AddContact extends React.Component {
               {this.props.isUpdating && (
                 <button
                   className="btn btn-secondary form-control btn-sm"
-                  
+                  onClick={this.handleCancel}
                 >
                   Cancel
                 </button>

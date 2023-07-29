@@ -124,6 +124,7 @@ class ContactIndex extends React.Component {
           };
         });
       };
+      
   render() {
     return (
       <div>
